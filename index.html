@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LogicOCR</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="LogicOCR: Do Your Large Multimodal Models Excel at Logical Reasoning on Text-Rich Images?">
+    <meta name="keywords" content="Large Multimodal Models, Logical Reasoning, OCR, Dense Text, Knowledge Free, Benchmark">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LogicOCR: Do Your Large Multimodal Models Excel at Logical Reasoning on Text-Rich Images?</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="https://kit.fontawesome.com/fff5b27ec1.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/eaf1856e6f.js" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title is-bold">
+                <img src="static/images/LogicOCR_logo.png" style="width:2em;vertical-align: middle" alt="Logo"/>
+                <span class="logicocr" style="vertical-align: middle">LogicOCR:</span>
+              </h1>
+              <h2 class="subtitle is-3 publication-subtitle">
+                <b>Do Your Large Multimodal Models Excel at Logical Reasoning on Text-Rich Images?</b>
+              </h2>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Maoyuan Ye<sup>1</sup>,</span>
+                <span class="author-block">Jing Zhang<sup>1 †</sup>,</span>
+                <span class="author-block">Juhua Liu<sup>1 †</sup>,</span>
+                <span class="author-block">Bo Du<sup>1</sup>,</span>
+                <span class="author-block">Dacheng Tao<sup>2</sup>,</span>
+              </div>
+
+              <br>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup> Wuhan University, <sup>2</sup> Nanyang Technological University</span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">†Corresponding Author</span><br>
+                <span class="author-block">Email: </span>
+                <span class="author-block"><a href="mailto:yemaoyuan@whu.edu.cn">yemaoyuan@whu.edu.cn</a>,</span>
+                <span class="author-block"><a href="mailto:jingzhang.cv@gmail.com">jingzhang.cv@gmail.com</a></span>
+                <span class="author-block"><a href="mailto:liujuhua@whu.edu.cn">liujuhua@whu.edu.cn</a>,</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/MiliLab/LogicOCR" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon" style="font-size:18px">🤗</span>
+                      <span>LogicOCR</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://github.com/MiliLab/LogicOCR" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon has-text-white">
+                        <i class="fa-solid fa-trophy"></i>
+                      </span>
+                      <span>Leaderboard</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="#keyfindings" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon" style="font-size:18px">📌</span>
+                      <span>Key Findings</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="margin-bottom: 2vh;">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">🔔News</h2>
+            <div class="content has-text-justified">
+              <p>
+                <b>🔥[2025-05-16] Introducing LogicOCR. <a href="https://huggingface.co/datasets/MiliLab/LogicOCR">Data</a> and <a href="https://github.com/MiliLab/LogicOCR">codes</a> are available.</b>
+              </p>
+          </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+    </div>
+    </section>
+
+    <!-- DATASET SECTION -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 logicocr">
+          <img src="static/images/LogicOCR_logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <span class="logicocr">LogicOCR Benchmark</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Introduction</h2>
+            <div class="content has-text-justified">
+              <p>
+                We introduce LogicOCR, a new benchmark designed to evaluate the <b>logical reasoning</b> abilities of Large Multimodal Models (LMMs) on <b>text-rich</b> images, with <b>minimal reliance on domain-specific knowledge</b>, such as mathematics. LogicOCR comprises 1,100 multiple-choice questions, spanning five reasoning types: categorical, sufficient conditional, necessary conditional, disjunctive, and conjunctive. We develop a scalable pipeline that leverages GPT-Image-1 to generate visually diverse, contextually grounded images from a curated text corpus, followed by manual verification.
+              </p>
+              <p>
+                 Our evaluation of various LMMs under both direct-answer and Chain-of-Thought (CoT) settings reveals that most models do not benefit from CoT prompting, suggesting potential weaknesses in their reasoning processes. While these models excel at OCR, their performance on multimodal reasoning lags behind their text-only counterparts, indicating a gap between visual understanding and logical inference. We also show that LMMs are sensitive to visual-text orientation and benefit from test-time scaling, highlighting important factors affecting multimodal reasoning.
+              </p>
+              <img src="static/images/logicocr.jpg" class="center" style="width:100%;">
+              <br>
+              <p>
+                <b>Motivation for Using GPT-Image-1 in Image Generation.</b> Generated images and their source text are like modality twins, we can directly compare performance across input types by feeding plain-text questions and multimodal problems into the same LMM. This enables us to pinpoint multimodal reasoning bottlenecks in LogicOCR. GPT-Image-1 offers strong instruction-following and high-fidelity visual-text rendering, presenting a promising alternative to prior synthetic methods. Unlike those synthetic approaches, it produces more natural, vivid images without requiring complex rule design. Notably, GPT-Image-1 can intelligently adapt text placement, color, and wrapping to fit the background and surrounding elements.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Comparisons with Existing Benchmarks</h2>
+            <div class="content has-text-justified">
+              <p>
+                Existing multimodal reasoning datasets often require extensive mathematical or scientific knowledge, making it difficult to isolate pure reasoning ability from domain expertise. In contrast, most OCR-related benchmarks lack complexity, potentially overstating LMM progress in integrating reading, understanding, and reasoning. Although CharXiv and OCRBench v2 include reasoning subsets, these are either narrowly focused on chart interpretation or rely on specialized knowledge.
+              </p>
+              <div class="content has-text-centered">
+                <img src="static/images/compare.png" alt="algebraic reasoning" class="center" style="width:50%;">
+                <p> Comparison of multimodal reasoning and OCR-related benchmarks. The test set sizes are reported, with only the reasoning subsets of CharXiv and OCRBench v2 included. `Knwl. Free' refers to domain knowledge-free data, while `Dense Text' contains dense visual-text in images. DocVQA focuses on document topics, whereas ChartQA and CharXiv target chart topics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">Statistics</h2>
+            <div class="carousel results-carousel">
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/statistics.jpg" alt="arithmetic reasoning" width="30%"/>
+                  <p> Key statistics of LogicOCR. Each sample may cover multiple reasoning categories.</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/word_cloud.png" alt="algebraic reasoning" width="60%"/>
+                  <p> Word cloud of background scenarios.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS SECTION -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 logicocr" id="leaderboard">
+          <img src="static/images/exp_logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <span class="logicocr">Leaderboard</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <!-- <h2 class="title is-3" id="leaderboard">Leaderboard</h2> -->
+            <div class="content has-text-justified">
+              <p>
+                We select a variety of LMMs for evaluation, including both open-source and proprietary models. 
+                We also incorporate the models optimized for multimodal reasoning in the evaluation. 
+                We report both the performance under CoT and direct answering (only answer the option's letter) settings.
+              </p>
+            </div>
+            <br>
+            <div class="model-labels-container">
+              <span class="leaderboard-label open_source">Open-Source</span>
+              <span class="leaderboard-label proprietary">Proprietary</span>
+            </div>
+            <br>
+            <div class="content has-text-centered">
+              <p>
+                Click on CoT to expand detailed results on involved reasoning types.
+              </p>
+            </div>
+
+            <div class="leaderboard-container">
+              <div class="table-wrapper">
+                <table id="logicocr-table">
+                  <thead>
+                    <tr>
+                      <th colspan="3" class="reset-cell clickable" style="text-align: center;">Reset</th>
+                      <th class="cot-details-cell clickable" colspan="1">CoT</th>
+                      <th class="direct-details-cell clickable" colspan="1">Direct</th>
+                    </tr>
+                    <tr>
+                      <th class="sortable clickable" data-sort="string">Name</th>
+                      <th class="clickable" data-sort="string">Activated Params.</th>
+                      <th class="sortable clickable" data-sort="date">Date</th>
+                      <th class="sortable clickable cot-overall" data-sort="number">Overall</th>
+                      <th class="hidden cot-details sortable clickable" data-sort="number">1</th>
+                      <th class="hidden cot-details sortable clickable" data-sort="number">2</th>
+                      <th class="hidden cot-details sortable clickable" data-sort="number">3</th>
+                      <th class="hidden cot-details sortable clickable" data-sort="number">>3</th>
+                      <th class="sortable clickable direct-overall" data-sort="number">Overall</th>
+                      <th class="hidden direct-details sortable clickable" data-sort="number">1</th>
+                      <th class="hidden direct-details sortable clickable" data-sort="number">2</th>
+                      <th class="hidden direct-details sortable clickable" data-sort="number">3</th>
+                      <th class="hidden direct-details sortable clickable" data-sort="number">>3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Table body will be populated dynamically -->
+                  </tbody>
+                </table>
+                <p class="test-desc"> Overall results of LMMs on the LogicOCR leaderboard. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-------------------------------------------------------------------- Key Findings SECTION -------------------------------------------------------------------->
+      <!-- RESULTS SECTION -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 logicocr" id="keyfindings">
+          <img src="static/images/pin.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <span class="logicocr">Key Findings</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">📜 Key Finding 1</h2>
+            <div class="content has-text-justified">
+              <p>
+                <b>Most LMMs show no improvement with CoT on LogicOCR,</b> suggesting flaws in their reasoning paths. Previous <a href="https://arxiv.org/abs/2409.12183">research</a> shows that CoT is more effective for math, symbolic, and algorithmic tasks, while its utility may be limited for tasks like commonsense reasoning. Our LogicOCR benchmark presents a challenging multimodal reasoning scenario for LMMs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">📜 Key Finding 2</h2>
+            <div class="content has-text-justified">
+              <p>
+                <b>Test-time scaling significantly improves performance on LogicOCR, though the efficiency of open-source LMMs still leaves room for improvement.</b> Notably, o4-mini achieves much higher accuracy using fewer tokens than QvQ-72B-Preview.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <img src="static/images/test_time_scaling.png" width="100%">
+              <p> Comparison of average accuracy and output length (completion tokens) between general LMMs and their reasoning-enhanced counterparts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">📜 Key Finding 3</h2>
+            <div class="content has-text-justified">
+              <p>
+                <b>LMMs still fall short of fully integrating visual reading and reasoning.</b> While vision-language alignment suffices for perception tasks like OCR, <b>it remains inadequate for more complex reasoning, especially as model size grows.</b> Therefore, achieving thorough vision-language alignment is vital for advancing multimodal reasoning in the future.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <img src="static/images/modality_influence.png" width="100%">
+              <p>Impact of input modalities on LMMs under the CoT setting. 'Text + Instruction' denotes text-only input, where the question is provided in the text. 'Image + Instruction' refers to multimodal input, with the question embedded in the image. 'OCR Output + Instruction' represents feeding LMM's OCR-extracted text to themselves instead of ground-truth text. While this two-step strategy yields higher accuracy than direct multimodal input, it incurs significant inference overhead and contradicts the objective of end-to-end multimodal reasoning from raw visual inputs without task-specific priors.</p>
+            </div>
+            <div class="content has-text-centered">
+              <img src="static/images/ocr_performance.png" width="100%">
+              <p>OCR performance of LMMs on LogicOCR. The collected text corpus serves as ground truth for OCR. Results show strong OCR capabilities across models. The strong performance also highlights the high visual-text fidelity of GPT-Image-1.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">📜 Key Finding 4</h2>
+            <div class="content has-text-justified">
+              <p>
+                <b>The perception robustness of LMMs across different visual-text orientations needs further improvement.</b>
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <img src="static/images/rotation.png" width="100%">
+              <p>Impact of visual-text orientation on LMM performance. Images were rotated 90 degrees and 180 degrees clockwise to alter text orientation. Results show that state-of-the-art LMMs are sensitive to such changes, <i>e.g.</i>, Ovis2 and InternVL2 accuracy drops to near-random levels, while Qwen2.5-VL demonstrates greater robustness.</p>
+            </div>
+          </div>
+        </div>
+        
+      <!-------------------------------------------------------------------- Error Analysis -------------------------------------------------------------------->
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">Error Analysis</h2>
+            <div class="content has-text-justified">
+              <p>
+                We analyze the error types of Qwen2.5-VL-72B during reasoning by categorizing them into six major types: 1) conceptual error, 2) logistic error, 3) argument structure error, 4) option analysis error, 5) information usage error, and 6) image reading error. 
+                These categories encompass 17 specific error types in total, though not all occur in every failure case. Definitions of each error type can be found in Appendix. 
+                To aid in analysis, we use o4-mini, with the prompt template provided in Appendix. Our analysis is based on 191 instances where Qwen2.5-VL-72B fails, but o4-mini gives correct answers.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <img src="static/images/error_distribution.png" alt="error distribution" width="55%">
+              <p> Error analysis for Qwen2.5-VL-72B reveals three main issues: misinterpretation, overlooking key information, and conditional fallacy.</p>
+            </div>
+          </div>
+        </div>
+
+    <!-- @PAN TODO: bibtex -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>
+          @article{ye2025logicocr,
+            title={LogicOCR: Do Your Large Multimodal Models Excel at Logical Reasoning on Text-Rich Images?},
+            author={Maoyuan Ye and Jing Zhang and Juhua Liu and Bo Du and Dacheng Tao},
+            booktitle={arXiv preprint arXiv:},
+            year={2025},
+          }
+    </code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, <a href="https://mathvista.github.io/">MathVista</a>, and <a href="https://github.com/MMMU-Benchmark/MMMU">MMMU</a>, licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

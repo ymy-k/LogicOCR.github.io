@@ -1,0 +1,497 @@
+{
+  "leaderboardData": [
+    {
+      "info": {
+        "name": "GPT-4o",
+        "size": "-",
+        "date": "2024-11-20",
+        "type": "proprietary",
+        "link": "https://openai.com/index/hello-gpt-4o/"
+      },
+      "cot": {
+        "overall": "63.1",
+        "type1": "64.6",
+        "type2": "67.2",
+        "type3": "60.5",
+        "typegt3": "61.0"
+      },
+      "direct": {
+        "overall": "60.3"
+      }
+    },
+    {
+      "info": {
+        "name": "o4-mini",
+        "size": "-",
+        "date": "2025-04-16",
+        "type": "proprietary",
+        "link": "https://openai.com/index/introducing-o3-and-o4-mini/"
+      },
+      "cot": {
+        "overall": "77.3",
+        "type1": "79.7",
+        "type2": "77.0",
+        "type3": "76.4",
+        "typegt3": "77.1"
+      }
+    },
+    {
+      "info": {
+        "name": "Claude-3.7-Sonnet",
+        "size": "-",
+        "date": "2025-02-19",
+        "type": "proprietary",
+        "link": "https://www.anthropic.com/news/claude-3-7-sonnet"
+      },
+      "cot": {
+        "overall": "71.8",
+        "type1": "75.0",
+        "type2": "73.5",
+        "type3": "68.1",
+        "typegt3": "73.3"
+      },
+      "direct": {
+        "overall": "59.1"
+      }
+    },
+    {
+      "info": {
+        "name": "Gemini-2.5-Pro (exp-03-25)",
+        "size": "-",
+        "date": "2025-03-25",
+        "type": "proprietary",
+        "link": "https://deepmind.google/technologies/gemini/pro/"
+      },
+      "cot": {
+        "overall": "80.7",
+        "type1": "82.3",
+        "type2": "81.7",
+        "type3": "80.6",
+        "typegt3": "78.4"
+      }
+    },
+    {
+      "info": {
+        "name": "TextMonkey",
+        "size": "9B",
+        "date": "2024-03-07",
+        "type": "open_source",
+        "link": "https://arxiv.org/abs/2403.04473"
+      },
+      "cot": {
+        "overall": "16.1",
+        "type1": "12.0",
+        "type2": "15.3",
+        "type3": "14.8",
+        "typegt3": "22.5"
+      },
+      "direct": {
+        "overall": "24.0"
+      }
+    },
+    {
+      "info": {
+        "name": "DocOwl2",
+        "size": "8B",
+        "date": "2024-09-05",
+        "type": "open_source",
+        "link": "https://arxiv.org/abs/2409.03420"
+      },
+      "cot": {
+        "overall": "19.0",
+        "type1": "13.0",
+        "type2": "22.6",
+        "type3": "16.9",
+        "typegt3": "22.9"
+      },
+      "direct": {
+        "overall": "16.2"
+      }
+    },
+    {
+      "info": {
+        "name": "MiniMonkey",
+        "size": "2B",
+        "date": "2024-08-04",
+        "type": "open_source",
+        "link": "https://arxiv.org/abs/2408.02034"
+      },
+      "cot": {
+        "overall": "30.0",
+        "type1": "30.7",
+        "type2": "31.0",
+        "type3": "28.3",
+        "typegt3": "30.9"
+      },
+      "direct": {
+        "overall": "30.6"
+      }
+    },
+    {
+      "info": {
+        "name": "LLaVA-OV",
+        "size": "7B",
+        "date": "2024-08-06",
+        "type": "open_source",
+        "link": "https://huggingface.co/llava-hf/llava-onevision-qwen2-7b-ov-hf"
+      },
+      "cot": {
+        "overall": "33.2",
+        "type1": "35.9",
+        "type2": "31.7",
+        "type3": "33.2",
+        "typegt3": "32.6"
+      },
+      "direct": {
+        "overall": "34.3"
+      }
+    },
+    {
+      "info": {
+        "name": "DeepSeek-VL2",
+        "size": "4.5B",
+        "date": "2024-12-13",
+        "type": "open_source",
+        "link": "https://arxiv.org/abs/2412.10302"
+      },
+      "cot": {
+        "overall": "37.1",
+        "type1": "37.0",
+        "type2": "36.6",
+        "type3": "35.8",
+        "typegt3": "39.8"
+      },
+      "direct": {
+        "overall": "41.3"
+      }
+    },
+    {
+      "info": {
+        "name": "NVILA",
+        "size": "8B",
+        "date": "2024-12-05",
+        "type": "open_source",
+        "link": "https://arxiv.org/abs/2412.04468"
+      },
+      "cot": {
+        "overall": "40.6",
+        "type1": "37.0",
+        "type2": "40.4",
+        "type3": "39.0",
+        "typegt3": "46.2"
+      },
+      "direct": {
+        "overall": "41.5"
+      }
+    },
+    {
+      "info": {
+        "name": "Kimi-VL-A3B-Instruct",
+        "size": "3B",
+        "date": "2025-04-10",
+        "type": "open_source",
+        "link": "https://arxiv.org/abs/2504.07491"
+      },
+      "cot": {
+        "overall": "49.6",
+        "type1": "48.4",
+        "type2": "49.8",
+        "type3": "48.8",
+        "typegt3": "51.3"
+      },
+      "direct": {
+        "overall": "54.1"
+      }
+    },
+    {
+      "info": {
+        "name": "Ovis2",
+        "size": "4B",
+        "date": "2025-03-25",
+        "type": "open_source",
+        "link": "https://github.com/AIDC-AI/Ovis"
+      },
+      "cot": {
+        "overall": "39.5",
+        "type1": "41.1",
+        "type2": "41.8",
+        "type3": "35.8",
+        "typegt3": "41.1"
+      },
+      "direct": {
+        "overall": "45.0"
+      }
+    },
+    {
+      "info": {
+        "name": "Ovis2",
+        "size": "8B",
+        "date": "2025-03-25",
+        "type": "open_source",
+        "link": "https://github.com/AIDC-AI/Ovis"
+      },
+      "cot": {
+        "overall": "47.9",
+        "type1": "50.0",
+        "type2": "50.5",
+        "type3": "45.5",
+        "typegt3": "47.0"
+      },
+      "direct": {
+        "overall": "49.2"
+      }
+    },
+    {
+      "info": {
+        "name": "Ovis2",
+        "size": "16B",
+        "date": "2025-03-25",
+        "type": "open_source",
+        "link": "https://github.com/AIDC-AI/Ovis"
+      },
+      "cot": {
+        "overall": "54.6",
+        "type1": "57.3",
+        "type2": "57.5",
+        "type3": "53.8",
+        "typegt3": "50.4"
+      },
+      "direct": {
+        "overall": "52.6"
+      }
+    },
+    {
+      "info": {
+        "name": "Ovis2",
+        "size": "34B",
+        "date": "2025-03-25",
+        "type": "open_source",
+        "link": "https://github.com/AIDC-AI/Ovis"
+      },
+      "cot": {
+        "overall": "57.3",
+        "type1": "61.5",
+        "type2": "56.1",
+        "type3": "56.9",
+        "typegt3": "55.9"
+      },
+      "direct": {
+        "overall": "59.8"
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3",
+        "size": "2B",
+        "date": "2025-04-11",
+        "type": "open_source",
+        "link": "https://internvl.github.io/blog/2025-04-11-InternVL-3.0/"
+      },
+      "cot": {
+        "overall": "34.9",
+        "type1": "38.0",
+        "type2": "37.6",
+        "type3": "33.0",
+        "typegt3": "32.2"
+      },
+      "direct": {
+        "overall": "37.7"
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3",
+        "size": "8B",
+        "date": "2025-04-11",
+        "type": "open_source",
+        "link": "https://internvl.github.io/blog/2025-04-11-InternVL-3.0/"
+      },
+      "cot": {
+        "overall": "50.4",
+        "type1": "58.9",
+        "type2": "50.9",
+        "type3": "48.1",
+        "typegt3": "46.6"
+      },
+      "direct": {
+        "overall": "50.6"
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3",
+        "size": "14B",
+        "date": "2025-04-11",
+        "type": "open_source",
+        "link": "https://internvl.github.io/blog/2025-04-11-InternVL-3.0/"
+      },
+      "cot": {
+        "overall": "60.9",
+        "type1": "64.1",
+        "type2": "61.3",
+        "type3": "60.5",
+        "typegt3": "58.5"
+      },
+      "direct": {
+        "overall": "61.6"
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3",
+        "size": "38B",
+        "date": "2025-04-11",
+        "type": "open_source",
+        "link": "https://internvl.github.io/blog/2025-04-11-InternVL-3.0/"
+      },
+      "cot": {
+        "overall": "61.3",
+        "type1": "64.6",
+        "type2": "60.6",
+        "type3": "59.7",
+        "typegt3": "61.9"
+      },
+      "direct": {
+        "overall": "61.7"
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2-VL",
+        "size": "2B",
+        "date": "2024-09-18",
+        "type": "open_source",
+        "link": "https://arxiv.org/abs/2409.12191"
+      },
+      "cot": {
+        "overall": "37.9",
+        "type1": "38.5",
+        "type2": "39.7",
+        "type3": "36.9",
+        "typegt3": "36.9"
+      },
+      "direct": {
+        "overall": "40.6"
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2-VL",
+        "size": "7B",
+        "date": "2024-09-18",
+        "type": "open_source",
+        "link": "https://arxiv.org/abs/2409.12191"
+      },
+      "cot": {
+        "overall": "45.2",
+        "type1": "43.2",
+        "type2": "47.0",
+        "type3": "46.8",
+        "typegt3": "41.9"
+      },
+      "direct": {
+        "overall": "50.7"
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5-VL",
+        "size": "3B",
+        "date": "2025-02-19",
+        "type": "open_source",
+        "link": "https://arxiv.org/pdf/2502.13923"
+      },
+      "cot": {
+        "overall": "44.9",
+        "type1": "47.4",
+        "type2": "47.4",
+        "type3": "42.9",
+        "typegt3": "43.2"
+      },
+      "direct": {
+        "overall": "49.6"
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5-VL",
+        "size": "7B",
+        "date": "2025-02-19",
+        "type": "open_source",
+        "link": "https://arxiv.org/pdf/2502.13923"
+      },
+      "cot": {
+        "overall": "51.4",
+        "type1": "58.9",
+        "type2": "50.2",
+        "type3": "49.6",
+        "typegt3": "49.6"
+      },
+      "direct": {
+        "overall": "52.6"
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5-VL",
+        "size": "32B",
+        "date": "2025-03-21",
+        "type": "open_source",
+        "link": "https://huggingface.co/Qwen/Qwen2.5-VL-32B-Instruct"
+      },
+      "cot": {
+        "overall": "65.2",
+        "type1": "67.2",
+        "type2": "63.4",
+        "type3": "66.8",
+        "typegt3": "63.1"
+      },
+      "direct": {
+        "overall": "64.2"
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5-VL",
+        "size": "72B",
+        "date": "2025-02-19",
+        "type": "open_source",
+        "link": "https://arxiv.org/pdf/2502.13923"
+      },
+      "cot": {
+        "overall": "65.6",
+        "type1": "70.3",
+        "type2": "64.8",
+        "type3": "62.9",
+        "typegt3": "67.4"
+      },
+      "direct": {
+        "overall": "67.2"
+      }
+    },
+    {
+      "info": {
+        "name": "Kimi-VL-A3B-Thinking",
+        "size": "3B",
+        "date": "2025-04-10",
+        "type": "open_source",
+        "link": "https://arxiv.org/abs/2504.07491"
+      },
+      "cot": {
+        "overall": "54.2"
+      }
+    },
+    {
+      "info": {
+        "name": "QvQ-72B-Preview",
+        "size": "72B",
+        "date": "2024-12-25",
+        "type": "open_source",
+        "link": "https://qwenlm.github.io/blog/qvq-72b-preview/"
+      },
+      "cot": {
+        "overall": "70.1"
+      }
+    }
+  ]
+}
